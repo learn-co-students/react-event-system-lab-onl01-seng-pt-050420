@@ -1,19 +1,14 @@
-// Code Keypad Component Here
-import React from 'react';
+import React, { Component } from 'react';
 
-class Keypad extends React.Component {
-    handleInputPassword = () => console.log('Entering password ...')
-
+export default class Keypad extends Component {
+    
     render() {
         return (
             <div>
-                <input
-                type="password"
-                onKeyUp={this.handleInputPassword}
-                />
+                <input onKeyUp={(e) => {
+                    console.log("Entering password...")
+                }} type="password" />
             </div>
         )
     }
 }
-
-export default Keypad;

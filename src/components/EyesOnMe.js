@@ -1,19 +1,15 @@
-// Code EyesOnMe Component Here
-import React from 'react';
+import React, { Component } from 'react';
 
-class EyesOnMe extends React.Component {
-
-    onFocus = () => console.log('Good!')
-
-    onBlur = () => console.log('Hey! Eyes on me!')
-
-    render (){
+export default class EyesOnMe extends Component {
+    render() {
         return (
-            <button onFocus={this.onFocus} onBlur={this.onBlur}>
-                Eyes on me, please! 
-            </button>
+            <div>
+                <button
+                    onFocus={(e) => {console.log("Good!")}}
+                    onBlur={(e) => {console.log("Hey! Eyes on me!")}}
+                >
+                </button>
+            </div>
         )
     }
 }
-
-export default EyesOnMe;
